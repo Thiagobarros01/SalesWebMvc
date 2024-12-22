@@ -2,19 +2,19 @@
 
 namespace SalesWebMvc.Models
 {
-    public class SalesRecord
+    public class SalesRecordModel
     {
         public int Id { get; set; }
         public DateTime Date { get; set; }
         public double Amount { get; set; }
         public SaleStatus Status { get; set; }
-        public Seller Seller { get; set; }
+        public SellerModel Seller { get; set; }
 
-        public SalesRecord() 
+        public SalesRecordModel() 
         {
         }
 
-        public SalesRecord( DateTime date, double amount, SaleStatus status, Seller seller)
+        public SalesRecordModel( DateTime date, double amount, SaleStatus status, SellerModel seller)
         {
             
             Date = date;

@@ -1,21 +1,21 @@
 ﻿namespace SalesWebMvc.Models
 {
-    public class Seller
+    public class SellerModel
     {
         public int Id { get; set; }
         public string Name { get; set; }
         public string Email { get; set; }
         public DateTime BirthDate { get; set; }
         public double BaseSalary { get; set; }
-        public Department Department { get; set; }
-        public ICollection<SalesRecord> Sales { get; set; } = new List<SalesRecord>();
+        public DepartmentModel Department { get; set; }
+        public ICollection<SalesRecordModel> Sales { get; set; } = new List<SalesRecordModel>();
 
-        public Seller()
+        public SellerModel()
         {
 
         }
 
-        public Seller(string name, string email, DateTime birthDate, double baseSalary, Department department)
+        public SellerModel(string name, string email, DateTime birthDate, double baseSalary, DepartmentModel department)
         {
            
             Name = name;
@@ -25,11 +25,11 @@
             Department = department;
         }
 
-        public void AddSales(SalesRecord sr)
+        public void AddSales(SalesRecordModel sr)
         {
             Sales.Add(sr);
         }
-        public void RemoveSales(SalesRecord sr)
+        public void RemoveSales(SalesRecordModel sr)
         {
             Sales.Remove(sr);
         }

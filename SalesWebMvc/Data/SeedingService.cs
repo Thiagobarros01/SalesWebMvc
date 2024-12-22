@@ -22,48 +22,48 @@ namespace SalesWebMvc.Data
             }
 
             // Remover os valores explícitos para as colunas de identidade
-            Department d1 = new Department("Computers");
-            Department d2 = new Department("Electronics");
-            Department d3 = new Department("Fashion");
-            Department d4 = new Department("Books");
+            DepartmentModel d1 = new DepartmentModel("Computers");
+            DepartmentModel d2 = new DepartmentModel("Electronics");
+            DepartmentModel d3 = new DepartmentModel("Fashion");
+            DepartmentModel d4 = new DepartmentModel("Books");
 
-            Seller s1 = new Seller("Bob Brown", "bob@gmail.com", new DateTime(1998, 4, 21), 1000.0, d1);
-            Seller s2 = new Seller("Maria Green", "maria@gmail.com", new DateTime(1979, 12, 31), 3500.0, d2);
-            Seller s3 = new Seller("Alex Grey", "alex@gmail.com", new DateTime(1988, 1, 15), 2200.0, d1);
-            Seller s4 = new Seller("Martha Red", "martha@gmail.com", new DateTime(1993, 11, 30), 3000.0, d4);
-            Seller s5 = new Seller("Donald Blue", "donald@gmail.com", new DateTime(2000, 1, 9), 4000.0, d3);
-            Seller s6 = new Seller("Alex Pink", "bob@gmail.com", new DateTime(1997, 3, 4), 3000.0, d2);
+            SellerModel s1 = new SellerModel("Bob Brown", "bob@gmail.com", new DateTime(1998, 4, 21), 1000.0, d1);
+            SellerModel s2 = new SellerModel("Maria Green", "maria@gmail.com", new DateTime(1979, 12, 31), 3500.0, d2);
+            SellerModel s3 = new SellerModel("Alex Grey", "alex@gmail.com", new DateTime(1988, 1, 15), 2200.0, d1);
+            SellerModel s4 = new SellerModel("Martha Red", "martha@gmail.com", new DateTime(1993, 11, 30), 3000.0, d4);
+            SellerModel s5 = new SellerModel("Donald Blue", "donald@gmail.com", new DateTime(2000, 1, 9), 4000.0, d3);
+            SellerModel s6 = new SellerModel("Alex Pink", "bob@gmail.com", new DateTime(1997, 3, 4), 3000.0, d2);
 
-            SalesRecord r1 = new SalesRecord(new DateTime(2018, 09, 25), 11000.0, SaleStatus.Billed, s1);
-            SalesRecord r2 = new SalesRecord(new DateTime(2018, 09, 4), 7000.0, SaleStatus.Billed, s5);
-            SalesRecord r3 = new SalesRecord(new DateTime(2018, 09, 13), 4000.0, SaleStatus.Canceled, s4);
-            SalesRecord r4 = new SalesRecord(new DateTime(2018, 09, 1), 8000.0, SaleStatus.Billed, s1);
-            SalesRecord r5 = new SalesRecord(new DateTime(2018, 09, 21), 3000.0, SaleStatus.Billed, s3);
-            SalesRecord r6 = new SalesRecord(new DateTime(2018, 09, 15), 2000.0, SaleStatus.Billed, s1);
-            SalesRecord r7 = new SalesRecord(new DateTime(2018, 09, 28), 13000.0, SaleStatus.Billed, s2);
-            SalesRecord r8 = new SalesRecord(new DateTime(2018, 09, 11), 4000.0, SaleStatus.Billed, s4);
-            SalesRecord r9 = new SalesRecord(new DateTime(2018, 09, 14), 11000.0, SaleStatus.Pending, s6);
-            SalesRecord r10 = new SalesRecord(new DateTime(2018, 09, 7), 9000.0, SaleStatus.Billed, s6);
-            SalesRecord r11 = new SalesRecord(new DateTime(2018, 09, 13), 6000.0, SaleStatus.Billed, s2);
-            SalesRecord r12 = new SalesRecord(new DateTime(2018, 09, 25), 7000.0, SaleStatus.Pending, s3);
-            SalesRecord r13 = new SalesRecord(new DateTime(2018, 09, 29), 10000.0, SaleStatus.Billed, s4);
-            SalesRecord r14 = new SalesRecord(new DateTime(2018, 09, 4), 3000.0, SaleStatus.Billed, s5);
-            SalesRecord r15 = new SalesRecord(new DateTime(2018, 09, 12), 4000.0, SaleStatus.Billed, s1);
-            SalesRecord r16 = new SalesRecord(new DateTime(2018, 10, 5), 2000.0, SaleStatus.Billed, s4);
-            SalesRecord r17 = new SalesRecord(new DateTime(2018, 10, 1), 12000.0, SaleStatus.Billed, s1);
-            SalesRecord r18 = new SalesRecord(new DateTime(2018, 10, 24), 6000.0, SaleStatus.Billed, s3);
-            SalesRecord r19 = new SalesRecord(new DateTime(2018, 10, 22), 8000.0, SaleStatus.Billed, s5);
-            SalesRecord r20 = new SalesRecord(new DateTime(2018, 10, 15), 8000.0, SaleStatus.Billed, s6);
-            SalesRecord r21 = new SalesRecord(new DateTime(2018, 10, 17), 9000.0, SaleStatus.Billed, s2);
-            SalesRecord r22 = new SalesRecord(new DateTime(2018, 10, 24), 4000.0, SaleStatus.Billed, s4);
-            SalesRecord r23 = new SalesRecord(new DateTime(2018, 10, 19), 11000.0, SaleStatus.Canceled, s2);
-            SalesRecord r24 = new SalesRecord(new DateTime(2018, 10, 12), 8000.0, SaleStatus.Billed, s5);
-            SalesRecord r25 = new SalesRecord(new DateTime(2018, 10, 31), 7000.0, SaleStatus.Billed, s3);
-            SalesRecord r26 = new SalesRecord(new DateTime(2018, 10, 6), 5000.0, SaleStatus.Billed, s4);
-            SalesRecord r27 = new SalesRecord(new DateTime(2018, 10, 13), 9000.0, SaleStatus.Pending, s1);
-            SalesRecord r28 = new SalesRecord(new DateTime(2018, 10, 7), 4000.0, SaleStatus.Billed, s3);
-            SalesRecord r29 = new SalesRecord(new DateTime(2018, 10, 23), 12000.0, SaleStatus.Billed, s5);
-            SalesRecord r30 = new SalesRecord(new DateTime(2018, 10, 12), 5000.0, SaleStatus.Billed, s2);
+            SalesRecordModel r1 = new SalesRecordModel(new DateTime(2018, 09, 25), 11000.0, SaleStatus.Billed, s1);
+            SalesRecordModel r2 = new SalesRecordModel(new DateTime(2018, 09, 4), 7000.0, SaleStatus.Billed, s5);
+            SalesRecordModel r3 = new SalesRecordModel(new DateTime(2018, 09, 13), 4000.0, SaleStatus.Canceled, s4);
+            SalesRecordModel r4 = new SalesRecordModel(new DateTime(2018, 09, 1), 8000.0, SaleStatus.Billed, s1);
+            SalesRecordModel r5 = new SalesRecordModel(new DateTime(2018, 09, 21), 3000.0, SaleStatus.Billed, s3);
+            SalesRecordModel r6 = new SalesRecordModel(new DateTime(2018, 09, 15), 2000.0, SaleStatus.Billed, s1);
+            SalesRecordModel r7 = new SalesRecordModel(new DateTime(2018, 09, 28), 13000.0, SaleStatus.Billed, s2);
+            SalesRecordModel r8 = new SalesRecordModel(new DateTime(2018, 09, 11), 4000.0, SaleStatus.Billed, s4);
+            SalesRecordModel r9 = new SalesRecordModel(new DateTime(2018, 09, 14), 11000.0, SaleStatus.Pending, s6);
+            SalesRecordModel r10 = new SalesRecordModel(new DateTime(2018, 09, 7), 9000.0, SaleStatus.Billed, s6);
+            SalesRecordModel r11 = new SalesRecordModel(new DateTime(2018, 09, 13), 6000.0, SaleStatus.Billed, s2);
+            SalesRecordModel r12 = new SalesRecordModel(new DateTime(2018, 09, 25), 7000.0, SaleStatus.Pending, s3);
+            SalesRecordModel r13 = new SalesRecordModel(new DateTime(2018, 09, 29), 10000.0, SaleStatus.Billed, s4);
+            SalesRecordModel r14 = new SalesRecordModel(new DateTime(2018, 09, 4), 3000.0, SaleStatus.Billed, s5);
+            SalesRecordModel r15 = new SalesRecordModel(new DateTime(2018, 09, 12), 4000.0, SaleStatus.Billed, s1);
+            SalesRecordModel r16 = new SalesRecordModel(new DateTime(2018, 10, 5), 2000.0, SaleStatus.Billed, s4);
+            SalesRecordModel r17 = new SalesRecordModel(new DateTime(2018, 10, 1), 12000.0, SaleStatus.Billed, s1);
+            SalesRecordModel r18 = new SalesRecordModel(new DateTime(2018, 10, 24), 6000.0, SaleStatus.Billed, s3);
+            SalesRecordModel r19 = new SalesRecordModel(new DateTime(2018, 10, 22), 8000.0, SaleStatus.Billed, s5);
+            SalesRecordModel r20 = new SalesRecordModel(new DateTime(2018, 10, 15), 8000.0, SaleStatus.Billed, s6);
+            SalesRecordModel r21 = new SalesRecordModel(new DateTime(2018, 10, 17), 9000.0, SaleStatus.Billed, s2);
+            SalesRecordModel r22 = new SalesRecordModel(new DateTime(2018, 10, 24), 4000.0, SaleStatus.Billed, s4);
+            SalesRecordModel r23 = new SalesRecordModel(new DateTime(2018, 10, 19), 11000.0, SaleStatus.Canceled, s2);
+            SalesRecordModel r24 = new SalesRecordModel(new DateTime(2018, 10, 12), 8000.0, SaleStatus.Billed, s5);
+            SalesRecordModel r25 = new SalesRecordModel(new DateTime(2018, 10, 31), 7000.0, SaleStatus.Billed, s3);
+            SalesRecordModel r26 = new SalesRecordModel(new DateTime(2018, 10, 6), 5000.0, SaleStatus.Billed, s4);
+            SalesRecordModel r27 = new SalesRecordModel(new DateTime(2018, 10, 13), 9000.0, SaleStatus.Pending, s1);
+            SalesRecordModel r28 = new SalesRecordModel(new DateTime(2018, 10, 7), 4000.0, SaleStatus.Billed, s3);
+            SalesRecordModel r29 = new SalesRecordModel(new DateTime(2018, 10, 23), 12000.0, SaleStatus.Billed, s5);
+            SalesRecordModel r30 = new SalesRecordModel(new DateTime(2018, 10, 12), 5000.0, SaleStatus.Billed, s2);
 
             _context.Departament.AddRange(d1, d2, d3, d4);
 

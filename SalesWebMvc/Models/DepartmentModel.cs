@@ -1,22 +1,22 @@
 ﻿namespace SalesWebMvc.Models
 {
-    public class Department
+    public class DepartmentModel
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public ICollection<Seller> Sellers { get; set; } = new List<Seller>();
+        public ICollection<SellerModel> Sellers { get; set; } = new List<SellerModel>();
 
-        public Department() 
+        public DepartmentModel() 
         {
         }
 
-        public Department( string name)
+        public DepartmentModel( string name)
         {
             
             Name = name;
         }
 
-        public void AddSeller(Seller seller)
+        public void AddSeller(SellerModel seller)
         {
             Sellers.Add(seller);
         }
